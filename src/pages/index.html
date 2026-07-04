@@ -93,7 +93,7 @@
         <section id="about" class="about">
             <div class="container about-grid">
                 <div>
-                    <div class="avatar" aria-label="Profile photo placeholder" role="img" src="/src/wwwroot/images/profile_picture.png"></div>
+                    <img class="profile-image" src="/src/wwwroot/images/profile_picture.png" alt="Profile photo placeholder" />
                 </div>
                 <div>
                     <div class="section-header">    
@@ -103,7 +103,7 @@
                     <p>I am a .NET Full Stack Developer with hands-on experience in building enterprise applications using ASP.NET Core (MVC & Web API), C#, Entity Framework Core, and SQL Server. On the front‑end, I deliver accessible, responsive UI with semantic HTML5, modern CSS, and vanilla JavaScript.</p>
                     <p>I focus on clean architecture, testing, and CI/CD to ship features confidently. Comfortable across Azure (App Service, Azure SQL, Storage, Functions), Docker, and GitHub Actions.</p>
                     <div class="hero-cta" style="margin-top:.5rem;">
-                        <a class="btn btn--primary" href="#" aria-label="Download CV">Download CV</a>
+                        <a class="btn btn--primary" href="https://docs.google.com/document/d/1TCwyiJFWQkG9rpXkrFevVdRXIztwndyO/export?format=pdf" download="Dhanush_Ben_Resume.pdf" aria-label="Download CV">Download CV</a>
                         <a class="btn" href="#skills">Core Competencies</a>
                     </div>
                 </div>
@@ -175,21 +175,24 @@
                     <h2>Featured work</h2>
                 </div>
 
+                <p class="project-intro">A mix of professional and personal work focused on building reliable web applications, APIs, and cloud-ready solutions.</p>
+
                 <div class="projects-grid">
                     <!-- Project 1 -->
                     <article class="project-card">
-                        <div class="thumb" role="img" aria-label="Project thumbnail placeholder"></div>
+                        <img class="thumb" src="/src/wwwroot/images/projects/chat_bot-azure.png" alt="Azure AI Chatbot project" />
                         <div class="project-body">
-                            <h3>AI Chatbot</h3>
-                            <p>ASP.NET Core Web API with EF Core and Azure SQL, implementing JWT auth and repository pattern.</p>
+                            <h3>Azure AI Chatbot</h3>
+                            <p>AI-powered chatbot built with Azure AI Foundry, .NET, Redis, and Azure Key Vault for secure, fast, and scalable conversations.</p>
                             <div class="project-meta">
-                                <span class="tag">ASP.NET Core</span>
-                                <span class="tag">EF Core</span>
-                                <span class="tag">Azure</span>
+                                <span class="tag">Azure AI Foundry</span>
+                                <span class="tag">.NET</span>
+                                <span class="tag">Redis</span>
+                                <span class="tag">Azure Key Vault</span>
                             </div>
                             <div class="project-actions">
-                                <a href="#" class="btn btn--primary">View Project</a>
-                                <a href="#" class="btn">Source</a>
+                                <button type="button" class="btn btn--primary project-demo-btn" data-demo-url="https://drive.google.com/file/d/17jain_S8kUxAF8LqyquzPNtLhlgOvI8c/preview?usp=sharing">View Demo</button>
+                                <a href="https://github.com/DhanushbenB/stateful_azure-ai-chatbot" target="_blank" rel="noopener noreferrer" class="btn">Source</a>
                             </div>
                         </div>
                     </article>
@@ -251,18 +254,18 @@
             </div>
         </section>
 
-        <!-- Experience & Education -->
+        <!-- Experience & Certifications -->
         <section id="experience">
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow">Experience & Education</div>
+                    <div class="eyebrow">Experience & Certifications</div>
                     <h2>Career timeline</h2>
                 </div>
 
                 <div class="timeline-wrap">
                     <!-- Experience -->
-                    <div>
-                        <h3 style="margin-bottom:.8rem;">Experience</h3>
+                    <div class="timeline-panel">
+                        <h3>Experience</h3>
                         <div class="timeline">
                             <div class="entry">
                                 <div class="entry-card">
@@ -283,27 +286,44 @@
                         </div>
                     </div>
 
-                    <!-- Education -->
-                    <div>
-                        <h3 style="margin-bottom:.8rem;">Education</h3>
+                    <!-- Certifications -->
+                    <div class="timeline-panel">
+                        <h3>Certifications</h3>
                         <div class="timeline">
                             <div class="entry">
                                 <div class="entry-card">
-                                    <h3>B.Sc. in Computer Science</h3>
-                                    <div class="sub">University Name</div>
-                                    <div class="period">2016 – 2020</div>
-                                    <p>Focused on software engineering, databases, algorithms, and distributed systems.</p>
+                                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem; margin-bottom:0.75rem;">
+                                        <h3 style="margin:0;">Responsive Web Design</h3>
+                                        <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="fcc-logo-link" aria-label="Visit freeCodeCamp" title="freeCodeCamp" style="display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:999px; padding:0.25rem; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); transition:transform .2s ease, box-shadow .2s ease, background .2s ease; position:relative;">
+                                            <img src="/src/wwwroot/images/certifications/freecodecamp.png" alt="freeCodeCamp logo" style="width:24px; height:24px; object-fit:contain;" />
+                                            <span style="position:absolute; top:-2.2rem; left:50%; transform:translateX(-50%) translateY(4px); background:rgba(4,16,24,.95); color:#fff; padding:0.25rem 0.5rem; border-radius:999px; font-size:0.75rem; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease;">freeCodeCamp</span>
+                                        </a>
+                                    </div>
+                                    <p>Built responsive and accessible web pages using HTML, CSS, and modern layout principles.</p>
+                                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem; flex-wrap:wrap; margin-top:0.6rem;">
+                                        <div class="period">Completed Aug 2025</div>
+                                        <a href="https://www.freecodecamp.org/certification/fcc852a5ebd-004e-4d79-8d65-8e4ba3ec3b89/responsive-web-design" target="_blank" rel="noopener noreferrer" class="btn" style="margin-top:0; padding:.7rem .9rem;">View</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="entry">
                                 <div class="entry-card">
-                                    <h3>Certifications</h3>
-                                    <div class="sub">Microsoft / Cloud</div>
-                                    <div class="period">Ongoing</div>
-                                    <p>Azure Fundamentals, GitHub Actions, and secure cloud development practices.</p>
+                                    <h3>GitHub Actions Essentials</h3>
+                                    <div class="sub">GitHub / DevOps</div>
+                                    <div class="period">2024</div>
+                                    <p>Learned CI/CD workflows, automation, and repository-based deployment practices.</p>
+                                </div>
+                            </div>
+                            <div class="entry extra-entry" hidden>
+                                <div class="entry-card">
+                                    <h3>Cloud Security Basics</h3>
+                                    <div class="sub">Cloud Security</div>
+                                    <div class="period">2024</div>
+                                    <p>Built understanding of secure application design, identity, and safe cloud deployment practices.</p>
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="view-more-btn" data-target=".extra-entry">View More</button>
                     </div>
                 </div>
             </div>
@@ -318,9 +338,8 @@
                 </div>
 
                 <div class="contact-grid">
-                    <!-- Form (HTML5 only) -->
-                    <form action="https://formspree.io/f/mgvlqovq" method="POST">
-                        <!-- Tip: replace action with your endpoint, or use mailto:you@example.com -->
+                    <!-- Form -->
+                    <form id="contact-form" action="https://formspree.io/f/mgvlqovq" method="POST" novalidate>
                         <div class="field">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your full name" required />
@@ -333,7 +352,10 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
                         </div>
-                        <button  type="submit" class="btn btn--primary">Send Message</button>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn--primary submit-btn">Send Message</button>
+                            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                        </div>
                     </form>
 
                     <!-- Socials -->
@@ -359,10 +381,27 @@
         </section>
     </main>
 
+    <div id="project-modal" class="modal-backdrop" hidden style="display: none;">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-header">
+                <h3 id="modal-title">Project Demo</h3>
+                <button type="button" class="modal-close" aria-label="Close demo">×</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="project-iframe" title="Project demo video" allow="autoplay; fullscreen"></iframe>
+                <p style="margin-top: 0.75rem; font-size: 0.95rem;">
+                    If the preview is blocked, <a href="https://drive.google.com/file/d/17jain_S8kUxAF8LqyquzPNtLhlgOvI8c/view?usp=sharing" target="_blank" rel="noopener noreferrer">open the video directly in Google Drive</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/scripts/main.js"></script>
+
     <!-- Footer -->
     <footer>
         <div class="container footer-row">
-            <div>© <span id="year">2025</span> Dhanush Ben. All rights reserved.</div>
+            <div>© <span id="year"></span> Dhanush Ben. All rights reserved.</div>
             <div class="footer-links" aria-label="Quick links">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
