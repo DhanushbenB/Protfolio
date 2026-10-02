@@ -515,6 +515,11 @@ h3 {
         border-color: rgba(255,255,255,.14);
     }
 
+.thumb-wrap {
+    position: relative;
+    width: 100%;
+}
+
 .thumb {
     aspect-ratio: 16/9;
     width: 100%;
@@ -522,6 +527,39 @@ h3 {
     display: block;
     background: linear-gradient(135deg, rgba(0,194,255,.16), rgba(20,241,217,.12)), linear-gradient(180deg, #0f1828, #0b1321);
     border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+/* Professional Project Tag */
+.project-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.badge-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.badge--professional {
+    background: linear-gradient(135deg, rgba(8, 25, 45, 0.9), rgba(11, 40, 68, 0.85));
+    border: 1px solid rgba(0, 194, 255, 0.65);
+    color: #79e0ff;
+    box-shadow: 0 0 16px rgba(0, 194, 255, 0.35);
 }
 
 .project-body {
